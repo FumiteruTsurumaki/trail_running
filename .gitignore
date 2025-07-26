@@ -1,0 +1,58 @@
+# ========================
+# 環境変数・機密情報
+# ========================
+.env
+.env.development.local
+.env.test.local
+.env.production.local
+
+# ========================
+# Node.js (Frontend)
+# ========================
+/frontend/node_modules/
+/frontend/.npm/
+/frontend/.pnpm-store/
+/frontend/npm-debug.log*
+/frontend/yarn-debug.log*
+/frontend/yarn-error.log*
+/frontend/.vite/ # Vite のキャッシュディレクトリ
+/frontend/dist/ # Vite のビルド出力ディレクトリ
+
+# ========================
+# Ruby on Rails (Backend)
+# ========================
+/backend/vendor/bundle/
+/backend/log/*.log
+/backend/tmp/
+/backend/db/*.sqlite3
+/backend/db/*.sqlite3-journal
+/backend/public/assets/ # Rails アセットパイプラインの出力
+/backend/storage/ # Active Storage のデフォルト保存先
+/backend/.byebug_history
+
+# Rails executable binstubs - keep `rails` and `rake` etc. but exclude others
+/backend/bin/*
+!/backend/bin/rails
+!/backend/bin/rake
+!/backend/bin/setup
+!/backend/bin/update
+
+# ========================
+# Docker
+# ========================
+# Docker のボリュームキャッシュが作成される可能性があるディレクトリ
+# もしボリュームキャッシュを明示的にマウントしている場合は、対応するパスを追加
+# 例: ホストの node_modules をマウントしている場合、ここに node_modules/ を追加しない
+
+# ========================
+# IDE and OS Specific
+# ========================
+.DS_Store         # macOS
+Thumbs.db         # Windows
+.vscode/          # VS Code の個人設定 (作業スペース設定は含める場合もあるが、通常は .gitgnore)
+.idea/            # IntelliJ IDEA
+
+# General
+*.log
+*.swp
+.DS_Store
