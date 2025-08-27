@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <title>Test Page</title>
+</head>
+<body>
+  <table>
+    <tbody>
+      <!-- ケース1: 新規のレース（単一日） -->
+      <tr>
+        <td><span>8月1日</span></td>
+        <td><a href="https://example.com/new_race"><b>新しいレース</b></a> (長野) 【100km】</td>
+      </tr>
+      <!-- ケース2: 既存のレース（複数日） -->
+      <tr>
+        <td><span>8月10日_8月11日</span></td>
+        <td><a href="https://example.com/existing_race"><strong>既存のレース</strong></a> (山梨) 【50km】</td>
+      </tr>
+      <!-- ケース3: 情報が不完全な行（レース名なし） -->
+      <tr>
+        <td><span>9月1日</span></td>
+        <td>(不明) 【距離不明】</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>

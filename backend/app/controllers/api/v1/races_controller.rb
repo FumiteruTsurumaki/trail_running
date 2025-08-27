@@ -6,7 +6,7 @@ module Api
 
       def index
         # 承認済み (status: 1) のレースのみを取得し、日付が新しい順に並べ替える
-        @races = Race.where(status: 1).order(date: :desc)
+        @races = Race.where(status: 1).order(date_start: :desc)
         render json: @races
       end
 
