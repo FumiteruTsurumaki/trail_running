@@ -1,0 +1,14 @@
+ja:
+  activerecord:
+    models:
+      admin: 管理者
+    attributes:
+      admin:
+        username: 管理者名
+        email: メールアドレス
+        password: パスワード
+    errors:
+      messages:
+        blank: "を入力してください"
+        taken: "は既に使用されています"
+        too_short: "は%{count}文字以上で入力してください"

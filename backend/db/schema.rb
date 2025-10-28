@@ -10,9 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2025_07_28_010000) do
+ActiveRecord::Schema[7.1].define(version: 2025_10_26_235037) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "admins", force: :cascade do |t|
+    t.string "username", null: false, comment: "管理者名"
+    t.string "email", null: false, comment: "メールアドレス"
+    t.string "password_digest", null: false, comment: "ハッシュ化済みパスワード"
+    t.integer "role", default: 0, null: false, comment: "役割 (0: 管理者, 1: オーナー)"
+    t.boolean "must_change_password", default: false, null: false, comment: "パスワード変更必須フラグ"
+    t.datetime "deleted_at", comment: "論理削除日時"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["email"], name: "index_admins_on_email", unique: true
+  end
 
   create_table "knowledges", force: :cascade do |t|
     t.string "title"
