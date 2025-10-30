@@ -15,7 +15,7 @@ ActiveRecord::Schema[7.1].define(version: 2025_10_26_235037) do
   enable_extension "plpgsql"
 
   create_table "admins", force: :cascade do |t|
-    t.string "username", null: false, comment: "管理者名"
+    t.string "name", null: false, comment: "名前"
     t.string "email", null: false, comment: "メールアドレス"
     t.string "password_digest", null: false, comment: "ハッシュ化済みパスワード"
     t.integer "role", default: 0, null: false, comment: "役割 (0: 管理者, 1: オーナー)"

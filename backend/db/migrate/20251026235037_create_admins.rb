@@ -1,7 +1,7 @@
 class CreateAdmins < ActiveRecord::Migration[7.1]
   def change
     create_table :admins do |t|
-      t.string :username, null: false, comment: "管理者名"
+      t.string :name, null: false, comment: "名前"
       t.string :email, null: false, comment: "メールアドレス"
       t.string :password_digest, null: false, comment: "ハッシュ化済みパスワード"
       t.integer :role, null: false, default: 0, comment: "役割 (0: 管理者, 1: オーナー)"
